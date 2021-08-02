@@ -307,3 +307,4 @@ Use this dscussion [Here](https://forum.pycom.io/topic/5389/lopy4-stuck-in-reboo
     ```  
 
     replacing \<PORT> with the actual port of the device for example COM4.
+    And then you also have to run the "Firmware update tool" again.
