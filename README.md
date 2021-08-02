@@ -6,7 +6,7 @@ Samuel Gunnarsson sg223bv
 
 ## Project overview
 
-The purpose of this project is to setup a device that can be mounted on any of your belongings and then be able to track them. The device will be able to send GPS coordinates to pybytes over the internet and detect movement. The device also has a micro SD card to be able to store information even if network is unavailable.  
+The purpose of this project is to set up a device that can be mounted on any of your belongings and then be able to track them. The device will be able to send GPS coordinates to pybytes over the internet and detect movement. The device also has a micro SD card to be able to store information even if network is unavailable.  
 
 ## Time needed
 
@@ -14,7 +14,7 @@ About 2 hours
 
 ## Objective
 
-I got the idea after I had a motorcycle stolen a couple of times and I thought it would be nice to get the position of the stolen bike as well as a notification when the bike is being moved. The GPS coordinates that are sent to pybytes will be used to get the latest recorded position of the device and these coordinates can then be pasted into any online map in order to see the posiiton on the map. It is also useful to track movement of the device because it can be used to send alerts when movement is detected and/or wake up the device from sleep. Thefts are very common but I have not heard much about asset tracking even if the technology is since long existent. If a simple device at the right price can help to retrive stolen assets I think it would be used at a greater extent.  
+I got the idea after I had a motorcycle stolen a couple of times and I thought it would be nice to get the position of the stolen bike as well as a notification when the bike is being moved. The GPS coordinates that are sent to pybytes will be used to get the latest recorded position of the device and these coordinates can then be pasted into any online map in order to see the position on the map. It is also useful to track movement of the device because it can be used to send alerts when movement is detected and/or wake up the device from sleep. Thefts are very common but I have not heard much about asset tracking even if the technology is since long existent. If a simple device at the right price can help to retrieve stolen assets I think it would be used at a greater extent.  
 
 ## List of materials
 
@@ -25,7 +25,7 @@ I got the idea after I had a motorcycle stolen a couple of times and I thought i
 |[LOPY4](#lopy4) |Development board |[Elektronikservice lopy4](https://www.komponentshoppen.se/?search=283-4985) |377 |
 |[Pytrack v1.1](#pytrack) |Expansion board| [Elektronikservice Pytrack](https://www.komponentshoppen.se/?search=2834994) |400 |
 |[Lipo battery](#lipo-battery) |3.7V 4400mAh |[Electro kit](https://www.electrokit.com/produkt/batteri-lipo-3-7v-4400mah/) |249 |
-|[Micro SD card](#micro-sd-card)|Max 32GB, formatted as fat16 OR fat32 |[Media Markt](https://www.mediamarkt.se/sv/product/_sandisk-minneskort-microsdhc-foto-ultra-32gb-120mb-s-uhs-i-adapt-1330057.html) |89 |
+|[Micro SD card](#micro-sd-card)|Max 32 GB, formatted as fat16 OR fat32 |[Media Markt](https://www.mediamarkt.se/sv/product/_sandisk-minneskort-microsdhc-foto-ultra-32gb-120mb-s-uhs-i-adapt-1330057.html) |89 |
 |Micro USB cable |USB 2.0 cable |[Kjell & company](https://www.kjell.com/se/produkter/mobilt/ladda-koppla/kablar-adaptrar/micro-usb-kablar/micro-usb-kabel-1-m-p68687) |100 |
 
 ### Lopy4
@@ -35,7 +35,7 @@ I got the idea after I had a motorcycle stolen a couple of times and I thought i
 **Specification**
 A Pycom development board with 4 different connection options to choose from. This is the "brain" of the device and also where the code will be uploaded to.  
 
-- Specification sheet can be found here [Lopy4 Specsheet](https://www.farnell.com/datasheets/2571934.pdf)
+- Specification sheet can be found here [Lopy4 Spec sheet](https://www.farnell.com/datasheets/2571934.pdf)
 
 ### Pytrack
 
@@ -44,14 +44,14 @@ A Pycom development board with 4 different connection options to choose from. Th
 **Specification**
 This expansion board has everything you need to get started with asset tracking. The built in GPS will be able to get the position of the device and the accelerometer can be used to detect movement and the orientation of the board. The JST connector simplifies attaching batteries to the board. With the MicroSD card slot it has the option to mount a MicroSD card in order to store information which might be useful for example if the internet connection is unavailable.
 
-- Specification Sheet can be found here [Pytrack specsheet](https://www.farnell.com/datasheets/2571938.pdf)
+- Specification Sheet can be found here [Pytrack spec sheet](https://www.farnell.com/datasheets/2571938.pdf)
 
 ### Lipo Battery
 
 ![Lipo Battery](./tutorial/lipo-battery.jpg)
 
 **Specification**
-Can be directly connected to the Pytrack expansion board with the JST PH 2.0mm connector and gives power to the device.
+Can be directly connected to the Pytrack expansion board with the JST PH 2.0 mm connector and gives power to the device.
 
 **Alternative**
 A cheaper alternative for the battery might be to buy a battery holder and insert 3xAAA batteries. It can be found at [electrokit](https://www.electrokit.com/produkt/batterihallare-3xaaa-med-strombrytare-och-jst-kontakt/) and only costs 29sek.
@@ -83,9 +83,9 @@ It's best to start with updating the pytrack expansion board.
 - In addition I would also recommend watching this 15min [Tutorial (How to update firmware)](https://youtu.be/FkycTZvj-ss) where the steps are explained in more detail.  
 
 **Lopy4**
-When the expansion board is updated we can update the device. Before updating however we need to connect the lopy4 to the expansion board. Check [Pytting everything together](#putting-everything-together) in this document if you are unsure which way to put it.
+When the expansion board is updated we can update the device. Before updating however we need to connect the lopy4 to the expansion board. Check [Putting everything together](#putting-everything-together) in this document if you are unsure which way to put it.
 
-- Follow this tutorial: [Updating Devide Firmware](https://docs.pycom.io/updatefirmware/device/)
+- Follow this tutorial: [Updating Device Firmware](https://docs.pycom.io/updatefirmware/device/)
   - On step 5 choose pybytes.
   - Skip pybytes registration for now
 
@@ -95,7 +95,7 @@ When the expansion board is updated we can update the device. Before updating ho
 I didn't need to install drivers but in case you do you can find the steps [here](https://docs.pycom.io/gettingstarted/software/drivers/)
 
 **Node.js, VS code and Pymakr**
-To get you IDE up and running please follow this tutorial: [VS code](https://docs.pycom.io/gettingstarted/software/vscode/).  
+To get your IDE up and running please follow this tutorial: [VS code](https://docs.pycom.io/gettingstarted/software/vscode/).  
 
 When pymakr is installed open the command palette inside VS code (CTRL + SHIFT + P) and search for "pymakr > global settings" to open a json file. Here change the port address to the port that you are using. If you are unsure of which port the device is connected to open device manager in windows and check your ports.
 
@@ -136,11 +136,11 @@ Check the Pymakr Console which should be visible at the bottom and have the devi
 
 If you can't type in the console try clicking **Pymakr Console** to reconnect.
 
-press **Run** while having the [main.py](none) open in order to run the code once. It will not be saved on the device and if you have libraries in your **lib** foleder which are not uploaded they will not be availible during runtime.
+Press **Run** while having the [main.py](none) open in order to run the code once. It will not be saved on the device and if you have libraries in your **lib** folder which are not uploaded they will not be available during run time.
 
 Now try hit **upload** instead and all the code in you **project** folder will be uploaded on the device so the next time it gets a power source the RGB led will still have the new color.
 
-Additionaly you can also write commands manually directly into the Console. Try this to make the RGB led blink blue again.
+Additionally you can also write commands manually directly into the Console. Try this to make the RGB led blink blue again.
 
 ```python
 >>> pycom.heartbeat(True)
@@ -153,7 +153,7 @@ Find the pinout diagrams for the lopy4 and the pytrack to see how they should be
 - [Lopy4](https://docs.pycom.io/gitbook/assets/specsheets/Pycom_002_Specsheets_LoPy4_v2.pdf) On page 5.
 - [Pytrack](https://docs.pycom.io/gitbook/assets/pytrack-pinout.pdf)
 
-Now just make sure that for Example GND on lopy4 ends up in the GND on the pytrack and you should be good. Make sure all the pins on the lopy4 ends up in a socket and push the devices together. Then the lipo rechargable battery just needs to be plugged in to the JST connection on the pytrack expansion board.
+Now just make sure that for Example GND on lopy4 ends up in the GND on the pytrack and you should be good. Make sure all the pins on the lopy4 ends up in a socket and push the devices together. Then the lipo rechargeable battery just needs to be plugged in to the JST connection on the pytrack expansion board.
 
 ### Result
 
@@ -228,7 +228,7 @@ else:
 
 The SD card needs to be mounted before it can be used and here we load the card and creates a folder named sd on the card. Again we check the coordinates before writing to make sure we were able to get real coordinates otherwise nothing will be written to the card. In f = open() We attempt to open a file called "coordinates.txt" and we are using 'a' = append mode which also creates the file for writing if it didn't already exist. A file pointer will be put at the end of the document so that new coordinates ends up here. Notice that coordinates are here written in the opposite order which since many maps start with the longitude so these coordinates could be pasted directly into for example google maps to check the position on a map. f.close() is important since data written might not be saved if the file is not properly closed.
 
-### Enable wakeup from accelerometer
+### Enable wake up from accelerometer
 
 ```python
 from LIS2HH12 import LIS2HH12
@@ -258,7 +258,7 @@ With acc.enable_activity_interrupt(2000, 200) you can set the sensitivity of the
 
 ## Transmitting the data / connectivity
 
-The data is sent with approximately 6 minute intervals to pybytes depending on how long it takes for the GPS to get the position. The device is connected to the internet using WiFi. This is done by providing your ssid and password in the pybytes_config.json file. By doing this it connects to the WiFi automatically when the device starts. Then the data is sent to pybytes using Mqtt transport protocol. Because WiFi is used and we need to be connected in order to send data it would not be a good option to track assets outside of your WiFi range. Lora and sigfox had good range but not so much outside of towns so I would not choose it for asset tracking. I would recommend buying for example the pycom device fipy which has a built in socket for SIM cards and then sign up and send data over cellular network. It's pretty cheap to since the GPS coordinates we are sending takes very little data. The coordinates we are sending in this project takes about 24bytes so imagine having a cellular limit of 200mb/ month which still would suffice for roughly about 20 messages per minute.
+The data is sent with approximately 6 minute intervals to pybytes depending on how long it takes for the GPS to get the position. The device is connected to the internet using WiFi. This is done by providing your ssid and password in the pybytes_config.json file. By doing this it connects to the WiFi automatically when the device starts. Then the data is sent to pybytes using Mqtt transport protocol. Because WiFi is used and we need to be connected in order to send data it would not be a good option to track assets outside of your WiFi range. Lora and sigfox had good range but not so much outside of towns, so I would not choose it for asset tracking. I would recommend buying for example the pycom device fipy which has a built in socket for SIM cards and then sign up and send data over cellular network. It's pretty cheap to since the GPS coordinates we are sending takes very little data. The coordinates we are sending in this project takes about 24bytes so imagine having a cellular limit of 200mb/ month which still would suffice for roughly about 20 messages per minute.
 
 ```python
 # Enable pybytes
@@ -285,11 +285,11 @@ Now the coordinates are visible at pybytes under signals for the device. In the 
 
 ## Finalizing the design
 
-Since this project is about asset tracking it still needs some changes before it could be considered completed. However there are some lessons learned throughout this project that are valuable. Regarding the hardware I have realised that a GPS takes some time to get a location fixed which might be a problem. I used the pytrack1 without realising there was a pytrack2. I also saw that the pytrack2 has the possibility to connect an antenna for the GPS which I believe would make the GPS more accurate and maybe quicker to find the location. Also there are more ways to get the position than using the GPS so why not use different sources in order to get the position. Additionally on the hardware part I bought the lopy4 and tested both WiFi, lora and sigfox networks but realised that if I want to be able to get good enough coverage to retreive some stolen item I would go with cellular and hence would need for example a sim card socket on the device. The fipy has one but it's quite expensive so if this project were to be produced in greate quantity I would look for cheaper examples.
+Since this project is about asset tracking it still needs some changes before it could be considered completed. However there are some lessons learned throughout this project that are valuable. Regarding the hardware I have realised that a GPS takes some time to get a location fixed which might be a problem. I used the pytrack1 without realizing there was a pytrack2. I also saw that the pytrack2 has the possibility to connect an antenna for the GPS which I believe would make the GPS more accurate and maybe quicker to find the location. Also there are more ways to get the position than using the GPS so why not use different sources in order to get the position. Additionally, on the hardware part I bought the lopy4 and tested both WiFi, lora and sigfox networks but realised that if I want to be able to get good enough coverage to retrive some stolen item I would go with cellular and hence would need for example a sim card socket on the device. The fipy has one but it's quite expensive so if this project were to be produced in greate quantity I would look for cheaper examples.
 
 As for now the location is only sent to pybytes but in addition I would also like to set up a way of getting notifications when for example when the device is moving, stopped or low on battery etc. And then instead of showing the coordinates on the dashboard it should be presented on a map directly.
 
-Overall I think I've learned a lot even if I didn't get as far as I expected with the project. Still I think it was a good thing to learn while trying out a bunch of different stuff and see what worked well and not so well.
+Overall I think I've learned a lot even if I didn't get as far as I expected with the project. Still, I think it was a good thing to learn while trying out a bunch of different stuff and see what worked well and not so well.
 
 ![device waiting for connection](./tutorial/waiting-yellow-small.jpg)
 
